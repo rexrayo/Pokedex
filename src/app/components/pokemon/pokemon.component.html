@@ -1,0 +1,22 @@
+<div class="pokemon">
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <!-- <img src="{{data.sprites.front_default}}" width="80" height="90"> -->
+        <img src="{{data.sprites.front_default}}" width="80" height="90">
+        <p class="pk_id">Nº {{data.id}}</p>
+        <hr>
+        <h2 class="pokemon_name">
+          {{data.name}}
+        </h2>
+        <ul class="pk_tipos" *ngFor="let t of data.types">
+          <li class="pk_tipo type-{{t.type.name}}">{{t.type.name}}</li>
+        </ul>
+        <div *ngIf="evolves != undefined">
+          <p className="texto_evo">{{(evolves.evolves_from_species != null) ? "Evoluciona de: " + evolves.evolves_from_species.name : ""}}</p>
+          <p className="pk_evo"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

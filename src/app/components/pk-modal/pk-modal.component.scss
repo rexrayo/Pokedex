@@ -1,0 +1,238 @@
+:host {
+    .modal {
+        display: table;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        transition: all 1s;
+        position: fixed;
+
+        -webkit-transform: scale(1.15);
+        transform: scale(1.15);
+
+        -webkit-transition:
+            -webkit-transform 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946),
+            opacity 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+
+        transition:
+            transform 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946),
+            opacity 0.1s cubic-bezier(0.465, 0.183, 0.153, 0.946);
+
+    }
+    
+    .container {
+        display: table-cell;
+        vertical-align: middle;
+        & > div {
+            height: 450px;
+            margin: 0 auto;
+            padding: 1rem;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);;
+            position         : relative;
+            margin           : 0px auto;
+            border           : 2px solid black;
+            border-radius    : 10px;
+            width            : 60%;
+            background-image : linear-gradient(to top, rgb(0, 255, 213), white);
+            box-shadow       : 0 0 20px rgba(black,0.7);
+            transition       : all 0.3s ease;
+
+                @media all and (min-width: 580px) {
+                    border-radius : 20px;
+
+                    &:hover {
+                        box-shadow : 0 0 15px rgba(black,0.9);
+                    }
+            }
+        }
+    }
+
+    .modalHeader {
+        position: relative;
+        h2 {
+            margin: 0;
+        }
+        span {
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            font-size: 1.3rem;
+            &:hover {
+                color: orange;
+            }
+        }
+    }
+
+    .modalContent {
+        padding-top: 2rem;
+        display         : flex;
+        align-items     : flex-start;
+        justify-content : space-around;
+        flex-flow       : wrap;
+        width           : 100%;
+    }
+
+    .detalles {
+        margin : 0 30px;
+        width  : 30%;
+
+        &:last-of-type {
+        margin-top : -20px;
+  }
+    }
+
+    .seccion {
+        display               : grid;
+        grid-template-columns : 1fr 1fr;
+        grid-gap              : 0;
+    }
+      
+    .fotos {
+        margin : -20px -20px 0 0;
+    }
+
+    .foto_container {
+        display               : grid;
+        grid-template-columns : 1fr 1fr;
+        grid-gap              : 0;
+      }
+      
+
+    .title {
+        text-align  : center;
+        font-size   : 1.8rem;
+        font-weight : bold;
+        color       : yellow;
+        text-shadow : 0 0 3px black;
+    }
+
+    .detalles_title {
+        margin-left : 10px;
+        font-size   : 0.9rem;
+        align-self  : flex-start;
+    }
+
+    .detalles_texto {
+        margin     : 4px 0;
+        background : rgba(gray,0.6);
+        border     : 1px solid rgba(black, 0.6);
+        text-align : center;
+        font-size  : 0.8rem;
+    }
+
+    .cerrar_modal {
+        border-radius: 5px;
+        border: 1px solid black;
+        background-image: linear-gradient(to top, rgb(255, 0, 0), white);
+        width: 15px;
+        padding: 3px;
+        padding-left: 9px;
+        padding-top: 0px;
+    }
+
+    .pk_tipos {
+        display         : ruby-base-container;
+        align-items     : center;
+        justify-content : center;
+        margin-top      : 5px;
+    }
+    
+    .pk_tipo, .habilidades {
+        margin        : 0 5px;
+        border        : 1px solid rgba(black, 0.2);
+        border-radius : 10px;
+        height        : 25px;
+        width         : 60px;
+        padding       : 1px 5px;
+        font-size     : 0.8rem;
+        line-height   : 1.3rem;
+        color         : white;
+        text-align    : center;
+        text-shadow   : 0 0 3px black;
+        list-style: none;
+    }
+
+    .habilidades {
+        margin-bottom : 20px;
+        background    : rgba(black, 0.7);
+        border-radius : 3px;
+        width         : auto;
+        font-size     : 0.8rem;
+        text-shadow   : none;
+      }
+    
+    .type-normal {
+        background : #8b856b;
+    }
+    
+    .type-fighting {
+        background : #652e35;
+    }
+    
+    .type-flying {
+        background : #7a5987;
+    }
+    
+    .type-poison {
+        background : #703a71;
+    }
+    
+    .type-ground {
+        background : #d4c786;
+    }
+    
+    .type-rock {
+        background : #c4c4c4;
+    }
+    
+    .type-bug {
+        background : #879079;
+    }
+    
+    .type-ghost {
+        background : #3e3646;
+    }
+    
+    .type-steel {
+        background : #797979;
+    }
+    
+    .type-fire {
+        background : #a44c4c;
+    }
+    
+    .type-water {
+        background : #5a92b6;
+    }
+    
+    .type-grass {
+        background : #668a5e;
+    }
+    
+    .type-electric {
+        background : #7e6a00;
+    }
+    
+    .type-psycho {
+        background : #d260bd;
+    }
+    
+    .type-ice {
+        background : #a0e0db;
+    }
+    
+    .type-dragon {
+        background : #1f1f1f;
+    }
+    
+    .type-dark {
+        background : #3b3724;
+    }
+    
+    .type-fairy {
+        background : #deb1e9;
+    }
+
+
+}

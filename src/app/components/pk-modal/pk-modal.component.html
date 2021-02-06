@@ -1,0 +1,49 @@
+<div class="modal" *ngIf="visible">
+    <div class="container">
+        <div>
+            <div>
+                <div class="modalHeader">
+                    <h2 class="title">
+                        {{info.name}}
+                    </h2>
+                    <span class="cerrar_modal" (click)="closeModal()">x</span>
+                </div>
+                <div class="modalContent">
+                    <div class="detalles">
+                        <div class="seccion">
+                            <img src="{{info.sprites.front_default}}" class="fotos">
+                            <img src="{{info.sprites.back_default}}" class="fotos">
+                            <img src="{{info.sprites.front_shiny}}" class="fotos">
+                            <img src="{{info.sprites.back_shiny}}" class="fotos">
+                        </div>
+                    </div>
+                    <div class="detalles">
+                        <h3 class="detalles_title">Tipos: </h3>
+                        <ul class="pk_tipos" *ngFor="let t of info.types">
+                            <li class="pk_tipo type-{{t.type.name}}">{{t.type.name}}</li>
+                        </ul>
+                        <h3 class="detalles_title">Habilidades: </h3>
+                        <ul class="pk_tipos" *ngFor="let h of info.abilities">
+                            <li class="habilidades">{{h.ability.name}}</li>
+                        </ul>
+                    </div>
+                    <div class="detalles">
+                        <div *ngIf="evol_lines.first_evo != null">
+                            <p class="detalles_title">Primera:</p><p class="detalles_texto">{{evol_lines.first_evo}}</p>
+                        </div>
+                        <div *ngIf="evol_lines.second_evo != null">
+                            <p class="detalles_title">Segunda:</p><p class="detalles_texto">{{evol_lines.second_evo}}</p>
+                        </div>
+                        <div *ngIf="evol_lines.third_evo != null">
+                            <p class="detalles_title">Tercera:</p><p class="detalles_texto">{{evol_lines.third_evo}}</p>
+                        </div>
+                    </div>
+                    <div class="detalles">
+                        <p class="detalles_title">Altura:</p> <p class="detalles_texto">{{info.height / 10}} m</p>
+                        <p class="detalles_title">Peso:</p> <p class="detalles_texto">{{info.weight / 10}} kg</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

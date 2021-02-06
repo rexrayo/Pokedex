@@ -1,0 +1,17 @@
+<div class="content">
+    <div>
+        <h1>POKEDEX</h1>
+    </div>
+    <section class="section">
+        <input type="text" class="filter" name="filterPk" placeholder="Pon el nombre de un pokemon"
+        [(ngModel)]='filterPk'/>
+    </section>
+  
+    <div class="flex-container">
+        <div *ngFor="let pk of pokemons | filter:filterPk ">
+            <app-pokemon [data]="pk" [evolves]="evolves[pk.id-1]" (click)="openModal(pk)"></app-pokemon>
+        </div>
+    </div>
+</div>
+
+<app-pk-modal [visible]="myModal" (close)="closeModal($event)" [info]="info" [evol_lines]="line"></app-pk-modal>
